@@ -5,8 +5,18 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
+[color]
+	branch = true
+	diff = true
+	grep = true
+	pager = true
+	status = true
+	ui = always
 [core]
 	excludesfile = ~/.config/git/gitignore_global
+	editor = vim
+[pull]
+	rebase = true
 [sendemail]
 	from = Mark Stenglein <mark@stengle.in>
 	smtpuser = mark@stengle.in
