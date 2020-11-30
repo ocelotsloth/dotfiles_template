@@ -1,5 +1,0 @@
-- clean: []
-- link: {}
-- shell: []
-- pacman:
-  - unclutter
