@@ -1,0 +1,16 @@
+[user]
+	name = Mark Stenglein
+	email = mark@stengle.in
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[core]
+	excludesfile = ~/.config/git/gitignore_global
+[sendemail]
+	from = Mark Stenglein <mark@stengle.in>
+	smtpuser = mark@stengle.in
+	smtpserver = "/usr/bin/msmtp"
+	smtpencryption = tls
+	chainreplyto = false
+
