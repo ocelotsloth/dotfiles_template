@@ -28,10 +28,15 @@
 # Use Mouse+$mod to drag floating windows to their wanted position
   floating_modifier $mod
 
+# Hide Title Bar
+for_window [class="^.*"] border pixel 1
+new_window 1pixel
+
 # Open Program Bindings 
   mode "open" {
     bindsym f exec firefox; mode "default"
     bindsym s exec spotify; mode "default"
+    bindsym c exec code; mode "default"
 
     # back to normal: Enter or Escape
     bindsym Escape mode "default"
@@ -43,7 +48,6 @@
   bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
   bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
   bindsym $mod+Shift+m exec logout
-  bindsym $mod+Shift+v exec ~/.config/i3/lock.sh
 
 # Pianobar Bindings
 # set $pianobar ~/.config/pianobar/control-pianobar.sh
@@ -157,10 +161,10 @@
     # Pressing right will grow the window’s width.
     # Pressing up will shrink the window’s height.
     # Pressing down will grow the window’s height.
-    bindsym h resize shrink width 10 px or 10 ppt
-    bindsym j resize grow height 10 px or 10 ppt
-    bindsym k resize shrink height 10 px or 10 ppt
-    bindsym l resize grow width 10 px or 10 ppt
+    bindsym h resize grow width 10 px or 10 ppt
+    bindsym j resize shrink height 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym l resize shrink width 10 px or 10 ppt
 
     # same bindings, but for the arrow keys
     bindsym Left resize shrink width 10 px or 10 ppt
@@ -200,7 +204,7 @@
   }
 
 # Lock Screen
-  bindsym $mod+shift+x exec i3lock
+  bindsym $mod+Shift+x exec ~/.config/i3/lock.sh
 
 # Pulse Audio controls
  bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
@@ -208,11 +212,11 @@
  bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
 
 # Sreen brightness controls
-# bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-# bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Touchpad controls
-# bindsym XF86TouchpadToggle exec ~/.config/i3/toggletouchpad.sh # toggle touchpad
+ bindsym XF86TouchpadToggle exec ~/.config/i3/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
   bindsym XF86AudioPlay exec playerctl play-pause
@@ -222,6 +226,7 @@
 
 # Assign specific workspaces to windows
   assign [class="Firefox"] $workspace1
+  assign [class="Termite"] $workspace2
 # assign [class="Franz"] $workspace9
 
 # Wallpaper
@@ -232,4 +237,8 @@
 
 # Display Layout
   exec mons -e left
+
+# i3-gaps
+gaps outer 10
+gaps inner 10
 

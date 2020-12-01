@@ -6,6 +6,7 @@
 
 - create:
     - ~/Projects
+    - ~/.cache/i3
 
 - link:
     ~/.gitconfig: git/gitconfig
@@ -15,6 +16,7 @@
     ~/.i3blocks.conf: i3/i3blocks.conf
     ~/.config/termite: termite/config
     ~/.config/beets: beets/config
+    ~/.Xresources: xterm/Xresources
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
