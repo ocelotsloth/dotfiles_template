@@ -13,7 +13,7 @@
 	status = true
 	ui = always
 [core]
-	excludesfile = ~/.config/git/gitignore_global
+	excludesfile = ~/.gitignore
 	editor = vim
 [pull]
 	rebase = true

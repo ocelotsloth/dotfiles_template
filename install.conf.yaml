@@ -9,7 +9,7 @@
 
 - link:
     ~/.gitconfig: git/gitconfig
-    ~/.config/git: git
+    ~/.gitignore: git/gitignore
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
