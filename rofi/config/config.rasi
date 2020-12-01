@@ -1,0 +1,4 @@
+configuration {
+  font: "Iosevka 25";
+}
+@import "/usr/share/rofi/themes/sidebar.rasi"

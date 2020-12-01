@@ -9,6 +9,8 @@ for more detailed instructions.
 Clone: `git clone https://github.com/ocelotslot/dotfiles.git`
 
 Install Dependencies:
+- rofi
+- dunst
 - scrot
 - imagemagick
 - python

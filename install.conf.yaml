@@ -17,6 +17,8 @@
     ~/.config/termite: termite/config
     ~/.config/beets: beets/config
     ~/.Xresources: xterm/Xresources
+    ~/.config/dunst: dunst/config
+    ~/.config/rofi: rofi/config
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
