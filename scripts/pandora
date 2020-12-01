@@ -1,0 +1,10 @@
+#/bin/bash
+
+FOUND=`fgrep -c "1" $HOME/.config/pianobar/isplaying`
+SONG=`cat $HOME/.config/pianobar/nowplaying | sed 's/(like)//g'`
+
+if [ $FOUND -eq 0 ]; then
+    echo "Not Playing"
+else
+    echo "$SONG"
+fi

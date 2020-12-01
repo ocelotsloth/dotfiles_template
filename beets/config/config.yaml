@@ -1,0 +1,5 @@
+directory: ~/Music
+#plugins: lyrics chroma fetchart embedart lastgenre web convert edit
+plugins: edit
+convert:
+  dest: ~/converted_music

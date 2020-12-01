@@ -10,6 +10,11 @@
 - link:
     ~/.gitconfig: git/gitconfig
     ~/.gitignore: git/gitignore
+    ~/.scripts: scripts
+    ~/.config/i3: i3/config
+    ~/.i3blocks.conf: i3/i3blocks.conf
+    ~/.config/termite: termite/config
+    ~/.config/beets: beets/config
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
