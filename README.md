@@ -9,6 +9,7 @@ for more detailed instructions.
 Clone: `git clone https://github.com/ocelotslot/dotfiles.git`
 
 Install Dependencies:
+- python-i3-py (aur)
 - rofi
 - dunst
 - scrot

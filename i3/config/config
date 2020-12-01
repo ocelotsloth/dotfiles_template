@@ -60,6 +60,9 @@ new_window 1pixel
 # bindsym $sup+b exec $pianobar ban
 # bindsym $sup+d exec $pianobar download
 
+# Locate window
+  bindsym $mod+Shift+f exec ~/.config/i3/winmenu.py
+
 # kill focused window
   bindsym $mod+Shift+q kill
 
