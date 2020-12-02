@@ -19,6 +19,8 @@
     ~/.Xresources: xterm/Xresources
     ~/.config/dunst: dunst/config
     ~/.config/rofi: rofi/config
+    ~/.bashrc: bash/bashrc
+    ~/.zshrc: zsh/zshrc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

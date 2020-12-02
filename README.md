@@ -9,6 +9,9 @@ for more detailed instructions.
 Clone: `git clone https://github.com/ocelotslot/dotfiles.git`
 
 Install Dependencies:
+- zsh
+- zsh-completions
+- grml-zsh-config (on arch only, for arch zsh conf)
 - python-i3-py (aur)
 - rofi
 - dunst
