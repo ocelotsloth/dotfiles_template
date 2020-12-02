@@ -24,3 +24,4 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [sh pre-install.sh, Running pre installation script]

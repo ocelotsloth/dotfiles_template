@@ -12,6 +12,7 @@ Install Dependencies:
 - zsh
 - zsh-completions
 - grml-zsh-config (on arch only, for arch zsh conf)
+- oh-my-zsh (aur)
 - python-i3-py (aur)
 - rofi
 - dunst
