@@ -9,11 +9,11 @@ for more detailed instructions.
 Clone: `git clone https://github.com/ocelotslot/dotfiles.git`
 
 Install Dependencies:
+- mlocate
 - zsh
 - zsh-completions
-- grml-zsh-config (on arch only, for arch zsh conf)
-- oh-my-zsh (aur)
 - python-i3-py (aur)
+- xautolock
 - rofi
 - dunst
 - scrot
@@ -28,6 +28,19 @@ Install Dependencies:
 
 Create Symlinks: `./install`
 
+### mlocate
+
+For systems using systemd-homed LUKS containers it makes sense to
+restrict the database so that it cannot scan the contents of the LUKS
+container. This would leak information about what files are present
+when that user is not logged in.
+
+Edit `/etc/updatedb.conf` and add `/home` to the list of excluded
+directories.
+
+Dotbot will handle creation of a user-local systemd-timer to create
+a user-local mlocate database that resides inside of the LUKS
+container.
 
 Dotfiles Template
 =================

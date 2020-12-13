@@ -1,0 +1,11 @@
+[Unit]
+Description=Update mlocate user database file.
+
+[Timer]
+Unit=updatedb.service
+OnBootSec=1min
+OnUnitActiveSec=10min
+
+[Install]
+WantedBy=timers.target
+

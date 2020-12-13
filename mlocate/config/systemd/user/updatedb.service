@@ -1,0 +1,7 @@
+[Unit]
+Description=Generate user-local mlocate database file.
+
+[Service]
+Type=oneshot
+ExecStart=updatedb -l 0 -o %h/.local/share/mlocate/mlocate.db -U %h
+

@@ -7,6 +7,8 @@
 - create:
     - ~/Projects
     - ~/.cache/i3
+    - ~/.local/share/mlocate
+    - ~/.config/systemd/user
     - ~/.config/zsh/post-zshrc.d
 
 - link:
@@ -28,6 +30,11 @@
     ~/.zprofile: zsh/zprofile
     ~/.zshenv: zsh/zshenv
     ~/.zshrc: zsh/zshrc
+    ~/.config/systemd/user/updatedb.service: mlocate/config/systemd/user/updatedb.service
+    ~/.config/systemd/user/updatedb.timer: mlocate/config/systemd/user/updatedb.timer
+    ~/.config/zsh/post-zshrc.d/mlocate-path.sh: mlocate/config/zsh/post-zshrc.d/mlocate-path.sh
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [systemctl --user daemon-reload, reload user systemd service manager]
+    - [systemctl --user --now enable updatedb.timer, start mlocate database timer]
