@@ -2,11 +2,12 @@
     link:
       relink: true
 
-- clean: ['~', '~/.config']
+- clean: ['~', '~/.config', '~/.zprezto']
 
 - create:
     - ~/Projects
     - ~/.cache/i3
+    - ~/.config/zsh/post-zshrc.d
 
 - link:
     ~/.gitconfig: git/gitconfig
@@ -20,8 +21,13 @@
     ~/.config/dunst: dunst/config
     ~/.config/rofi: rofi/config
     ~/.bashrc: bash/bashrc
+    ~/.zprezto: zsh/prezto
+    ~/.zlogin: zsh/zlogin
+    ~/.zlogout: zsh/zlogout
+    ~/.zpreztorc: zsh/zpreztorc
+    ~/.zprofile: zsh/zprofile
+    ~/.zshenv: zsh/zshenv
     ~/.zshrc: zsh/zshrc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - [sh pre-install.sh, Running pre installation script]
