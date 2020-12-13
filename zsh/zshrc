@@ -22,3 +22,12 @@ if [[ -s "$HOME/.config/zsh/post-zshrc.d" ]]; then
   done
 fi
 
+#
+# Color Output
+#
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip -color=auto'
+
+export TERM=xterm-256color
+
