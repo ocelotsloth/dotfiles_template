@@ -208,6 +208,7 @@ new_window 1pixel
 
 # Lock Screen
   bindsym $mod+Shift+x exec ~/.config/i3/lock.sh
+  exec xautolock -time 10 -locker ~/.config/i3/lock.sh
 
 # Pulse Audio controls
  bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
@@ -242,6 +243,6 @@ new_window 1pixel
   exec mons -e left
 
 # i3-gaps
-gaps outer 10
-gaps inner 10
+# gaps outer 10
+# gaps inner 10
 
