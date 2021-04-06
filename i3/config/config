@@ -206,6 +206,9 @@ new_window 1pixel
     }
   }
 
+# nmcli helper
+bindsym $mod+n exec ~/.config/rofi/network-manager/rofi-network-manager.sh
+
 # Lock Screen
   bindsym $mod+Shift+x exec ~/.config/i3/lock.sh
   exec xautolock -time 10 -locker ~/.config/i3/lock.sh
